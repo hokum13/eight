@@ -60,7 +60,7 @@ abstract class Staff
 	public static function makeMailUrl($Mail)
 		{
 		if($Mail)
-			return preg_replace("/([A-z0-9_\.\-]{1,20}@[A-z0-9\.\-]{1,20}\.[A-z]{2,4})/u", "<a href='mailto:\\1' class='in_link'>\\1</a>", $Mail);
+			return preg_replace("/([A-z0-9_\.\-]{1,30}@[A-z0-9\.\-]{1,20}\.[A-z]{2,4})/u", "<a href='mailto:\\1' class='in_link'>\\1</a>", $Mail);
 		else
 			return "x";
 		}
