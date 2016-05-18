@@ -101,7 +101,8 @@ if(is_array($Staff))
 													    'url_vars' => $url_vars
 													    ),
 										 ) );	
-	echo Application::getCollTitle($L->l('room_number'), 
+	if(!$HIDE_ROOM_NUMBER)
+		echo Application::getCollTitle($L->l('room_number'), 
 									array(
 										'sort' => array(
 													    'field' => $LDAP_ROOM_NUMBER_FIELD,
